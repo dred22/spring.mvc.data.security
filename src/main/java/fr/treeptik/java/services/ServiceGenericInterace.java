@@ -1,4 +1,4 @@
-package fr.treeptik.java.interfaces;
+package fr.treeptik.java.services;
 
 import java.util.List;
 
