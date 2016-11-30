@@ -44,7 +44,7 @@
    	</div>
 	</div>
 </div>
-<%-- <c:if test="${sessionScope.toggled == 'toggled'}">
-	<c:set var="toggled" value=" " scope="session"  />
-</c:if> --%>
+<c:if test="${empty sessionScope.toggled}">
+	<c:set var="toggled" value="toggled" scope="session"  />
+</c:if>
 <div id="wrapper" class="${toggled}">

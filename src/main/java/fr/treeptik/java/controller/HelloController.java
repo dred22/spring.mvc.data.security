@@ -1,6 +1,5 @@
 package fr.treeptik.java.controller;
 
-import java.util.Date;
 import java.util.List;
 
 import javax.servlet.http.HttpSession;
@@ -12,6 +11,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.SessionAttributes;
 
 import fr.treeptik.java.models.Department;
@@ -46,6 +46,7 @@ public class HelloController {
 		return "show";
 	}
 	@RequestMapping("/toggle")
+	@ResponseBody
 	public String  toggle(HttpSession session, ModelMap model){
 		String toggled = (String) session.getAttribute("toggled");
 		System.out.println(toggled);
@@ -58,7 +59,7 @@ public class HelloController {
 
 		model.addAttribute("toggled", toggled);
 		
-		return toggled;
+		return "{"+toggled+"}";
 	}
 	
 	/*	public String  toggle(@ModelAttribute("toggled") String toggled){
