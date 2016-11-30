@@ -6,6 +6,7 @@
 		<li><a href="${pageContext.request.contextPath}/create"><spring:message code="side-bar.create"/></a></li>
 
 		<li><a href="${pageContext.request.contextPath}/show-all"><spring:message code="side-bar.show_all"/></a></li>
+		<li><a href="${pageContext.request.contextPath}/login"><spring:message code="authentication.login"/></a></li>
 		<!-- 		<li><a href="#">Events</a></li>
 		<li><a href="#">About</a></li>
 		<li><a href="#">Services</a></li>

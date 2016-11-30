@@ -1,7 +1,6 @@
 package fr.treeptik.java.controller;
 
 import java.util.List;
-import java.util.Locale;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -14,6 +13,7 @@ import org.springframework.web.bind.annotation.SessionAttributes;
 
 import fr.treeptik.java.models.Department;
 import fr.treeptik.java.models.Employee;
+import fr.treeptik.java.models.User;
 import fr.treeptik.java.services.DepartmentServiceInterface;
 import fr.treeptik.java.services.EmployeServiceInterface;
 
@@ -113,6 +113,19 @@ public class HelloController {
 		System.out.println("To delete ID is "+id);
 		model.addAttribute("deleted", "ok");
 		return "forward: show-all";
+	}
+	@RequestMapping("/login")
+	public String  getLogin(ModelMap model){
+		//System.out.println("index "+locale);
+		//System.out.println("index");
+		model.addAttribute("user", new User());
+		return "login";
+	}
+	@RequestMapping( path = "/login", method = RequestMethod.POST)
+	public String  postLogin(@ModelAttribute("user") User usre){
+		//User = se.save(usre);
+		System.out.println("logiiiiiiin "+usre);
+		return "create";
 	}
 	
 }
