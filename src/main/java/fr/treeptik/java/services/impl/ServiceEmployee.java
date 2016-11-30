@@ -26,6 +26,12 @@ public class ServiceEmployee implements EmployeServiceInterface {
 		return er.findOne(id);
 	}
 
+	@Override
+	public Employee save(Employee obj) {
+		return er.save(obj);
+		
+	}
+
 
 
 }

@@ -25,4 +25,10 @@ public class ServiceDepartment implements DepartmentServiceInterface {
 		return dr.findOne(id);
 	}
 
+	@Override
+	public Department save(Department obj) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }
