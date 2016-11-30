@@ -1,6 +1,9 @@
 package fr.treeptik.java.controller;
 
+import java.util.Date;
 import java.util.List;
+
+import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -42,23 +45,21 @@ public class HelloController {
 		System.out.println(em);
 		return "show";
 	}
-//	@RequestMapping("/toggle")
-//	@ResponseBody
-//	public String  toggle(HttpSession session ){
-//		//session.setAttribute("toggled", "toggled");
-//		
-//		String toggled = (String) session.getAttribute("toggled");
-//		System.out.println(toggled);
-//		
-//		if(toggled.equals("toggled")){
-//			toggled = "4";
-//		} else {
-//			toggled = "toggled";
-//		}
-//		session.removeValue("toggled");
-//		//session.setAttribute("toggled", toggled);
-//		return "{"+toggled+"}";
-//	}
+	@RequestMapping("/toggle")
+	public String  toggle(HttpSession session, ModelMap model){
+		String toggled = (String) session.getAttribute("toggled");
+		System.out.println(toggled);
+		
+		if("toggled".equals(toggled)){
+			toggled = " ";
+		} else {
+			toggled = "toggled";
+		}
+
+		model.addAttribute("toggled", toggled);
+		
+		return toggled;
+	}
 	
 	/*	public String  toggle(@ModelAttribute("toggled") String toggled){
 		System.out.println(toggled);
