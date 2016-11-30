@@ -1,18 +1,15 @@
 package fr.treeptik.java.controller;
 
 import java.util.List;
-
-import javax.servlet.http.HttpSession;
+import java.util.Locale;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.SessionAttributes;
 
 import fr.treeptik.java.models.Department;
@@ -88,7 +85,8 @@ public class HelloController {
 	
 	@RequestMapping("/")
 	public String  index(){
-		System.out.println("index");
+		//System.out.println("index "+locale);
+		//System.out.println("index");
 		return "index";
 	}
 	@RequestMapping("/show-all")
@@ -114,8 +112,7 @@ public class HelloController {
 		se.delete(id);
 		System.out.println("To delete ID is "+id);
 		model.addAttribute("deleted", "ok");
-		//return "forward: show-all";
-		return "redirect: http://mail.ru";
+		return "forward: show-all";
 	}
 	
 }

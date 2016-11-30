@@ -13,6 +13,9 @@
 
     <!-- Bootstrap Core CSS -->
     <link href="${pageContext.request.contextPath}/public/css/bootstrap.min.css" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css"> -->
+    
+    <link href="${pageContext.request.contextPath}/public/css/languages.min.css" rel="stylesheet">
 
     <!-- Custom CSS -->
     <link href="${pageContext.request.contextPath}/public/css/simple-sidebar.css" rel="stylesheet">
@@ -29,7 +32,18 @@
     <link rel="stylesheet" href="${pageContext.request.contextPath}/text.txt" /> --%>
 
 </head>
+
+
+
 <body>
+<div class=" navbar-fixed-top ">
+   <div class="container">
+   <div class="pull-right">   
+   		<a href="${requestScope['javax.servlet.forward.request_uri']}?mylocale=en" class="lang-lg" lang="en"></a>
+   		<a href="${requestScope['javax.servlet.forward.request_uri']}?mylocale=fr" class="lang-lg" lang="fr"></a>
+   	</div>
+	</div>
+</div>
 <c:if test="${sessionScope.toggled == 'toggled'}">
 	<c:set var="toggled" value=" " scope="session"  />
 </c:if>

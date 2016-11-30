@@ -1,4 +1,5 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://www.springframework.org/tags" prefix="spring"%>
 <%@ include file="components/head.jsp" %>
 
 <!--     <div id="wrapper"> -->
@@ -11,7 +12,7 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <h1>My CRUD web site</h1>
-                        <p>Welcome</p>
+                        <p><spring:message code="welcome"/></p>
                         <a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Toggle Menu</a>
                     </div>
                 </div>
