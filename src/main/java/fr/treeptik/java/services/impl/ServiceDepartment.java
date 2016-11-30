@@ -31,4 +31,10 @@ public class ServiceDepartment implements DepartmentServiceInterface {
 		return null;
 	}
 
+	@Override
+	public void delete(Integer id) {
+		// TODO Auto-generated method stub
+		
+	}
+
 }

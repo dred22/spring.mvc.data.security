@@ -11,6 +11,7 @@ import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.SessionAttributes;
 
@@ -103,13 +104,18 @@ public class HelloController {
 		return "create";
 	}
 	@RequestMapping( path = "/create", method = RequestMethod.POST)
-	public String  postCreate(@ModelAttribute("employee") Employee employee, ModelMap model){
-//	      model.addAttribute("firstName", employee.firstName());
-//	      model.addAttribute("lastName", employee.lastName());
-//	      model.addAttribute("salary", employee.salary());
+	public String  postCreate(@ModelAttribute("employee") Employee employee){
 		employee = se.save(employee);
 		System.out.println("POOOOOOOSTED "+employee);
 		return "create";
+	}
+	@RequestMapping( path = "/delete")
+	public String  getDelete(ModelMap model, @RequestParam int id){
+		se.delete(id);
+		System.out.println("To delete ID is "+id);
+		model.addAttribute("deleted", "ok");
+		//return "forward: show-all";
+		return "redirect: http://mail.ru";
 	}
 	
 }

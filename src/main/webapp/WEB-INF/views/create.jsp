@@ -41,7 +41,7 @@
 						</div>
 					</c:when>
 					<c:otherwise>
-				<div class="alert alert-success" role="alert">Employee <strong>${employee.firstName}</strong> was successful created </div>
+				<div class="alert alert-success text-center" role="alert">Employee <strong>${employee.firstName}</strong> was successful created </div>
 					</c:otherwise>
 				</c:choose>
 

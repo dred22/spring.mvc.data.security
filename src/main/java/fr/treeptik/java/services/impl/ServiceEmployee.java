@@ -16,7 +16,7 @@ public class ServiceEmployee implements EmployeServiceInterface {
 
 	@Override
 	public List<Employee> findAll() {
-		 
+		
 		return er.findAll();
 	}
 
@@ -30,6 +30,12 @@ public class ServiceEmployee implements EmployeServiceInterface {
 	public Employee save(Employee obj) {
 		return er.save(obj);
 		
+	}
+
+	@Override
+	public void delete(Integer id) {
+		// TODO Auto-generated method stub
+		er.delete(id);
 	}
 
 
