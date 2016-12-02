@@ -5,6 +5,7 @@ import java.util.List;
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.annotation.Secured;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -91,6 +92,7 @@ public class HelloController {
 		//System.out.println("index");
 		return "index";
 	}
+	
 	@RequestMapping("/show-all")
 	public String  showAll(ModelMap model){
 		List<Employee> em = se.findAll();
@@ -109,6 +111,7 @@ public class HelloController {
 		System.out.println("POOOOOOOSTED "+employee);
 		return "create";
 	}
+	@Secured(value = {"ROLE_ADMIN"})
 	@RequestMapping( path = "/delete")
 	public String  getDelete(ModelMap model, @RequestParam int id){
 		se.delete(id);

@@ -14,7 +14,7 @@
 			<div class="col-sm-offset-3 col-sm-6">
 				<c:choose>
 					<c:when test="${logined !='ok'}">
-						<div class="panel panel-default">
+						<div class="panel panel-warning">
 
 							<div class="panel-heading"><spring:message code="authentication"/></div>
 							<div class="panel-body">

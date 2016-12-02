@@ -10,10 +10,13 @@
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<spring-framework-version>4.2.8.RELEASE</spring-framework-version>
+		<org.springframework.security.version>4.2.0.RELEASE</org.springframework.security.version>
 		<db.driverClassName>com.mysql.jdbc.Driver</db.driverClassName>
 	</properties>
 
-
+	<!-- <repositories> ... possibly other repository elements ... <repository> 
+		<id>spring-snapshot</id> <name>Spring Snapshot Repository</name> <url>https://repo.spring.io/snapshot</url> 
+		</repository> </repositories> -->
 	<dependencies>
 
 
@@ -69,7 +72,28 @@
 			<artifactId>commons-dbcp</artifactId>
 			<version>1.2.2</version>
 		</dependency>
-		<!-- Test -->
+
+		<!-- security -->
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-web</artifactId>
+			<version>${org.springframework.security.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-config</artifactId>
+			<version>${org.springframework.security.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-taglibs</artifactId>
+			<version>${org.springframework.security.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.thymeleaf</groupId>
+			<artifactId>thymeleaf-spring3</artifactId>
+			<version>3.0.0.RELEASE</version>
+		</dependency>
 	</dependencies>
 
 	<build>

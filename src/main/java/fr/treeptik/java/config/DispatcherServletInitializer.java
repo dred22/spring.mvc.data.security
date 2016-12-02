@@ -7,7 +7,10 @@ import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatche
 
 public class DispatcherServletInitializer extends
 		AbstractAnnotationConfigDispatcherServletInitializer {
-
+	{
+		
+		System.out.println("DispatcherServletInitializer+++++++++++++++++++++++++");
+	}
 	@Override
 	protected Class<?>[] getRootConfigClasses() {
 		return new Class<?>[] { DataAccessConfig.class,
