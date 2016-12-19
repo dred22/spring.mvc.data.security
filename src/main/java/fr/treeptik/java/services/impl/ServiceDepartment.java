@@ -25,10 +25,18 @@ public class ServiceDepartment implements DepartmentServiceInterface {
 		return dr.findOne(id);
 	}
 
+	public DepartmentRepository getDr() {
+		return dr;
+	}
+
+	public void setDr(DepartmentRepository dr) {
+		this.dr = dr;
+	}
+
 	@Override
 	public Department save(Department obj) {
 		// TODO Auto-generated method stub
-		return null;
+		return dr.save(obj);
 	}
 
 	@Override

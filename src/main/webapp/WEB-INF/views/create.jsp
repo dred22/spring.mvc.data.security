@@ -3,12 +3,11 @@
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 <%@ include file="components/head.jsp"%>
 
-<!-- <div id="wrapper"> -->
-	<%@ include file="components/side-bar.jsp"%>
+<%@ include file="components/side-bar.jsp"%>
 
+<!-- Page Content -->
+<div id="page-content-wrapper">
 
-	<!-- Page Content -->
-	<div id="page-content-wrapper">
 		<div class="container">
 
 			<div class="col-sm-offset-3 col-sm-6">
@@ -21,16 +20,16 @@
 								<form:form method="post" modelAttribute="employee">
 									<div class="form-group">
 										<label for="firstName"><spring:message code="create.employee.firstName"/></label>
-										<form:input path="firstName" class="form-control" />
+										<form:input path="firstName" class="form-control"  required="required"/>
 										<!-- <input id="firstName" name="firstName" class="form-control" type="text" /> -->
 									</div>
 									<div class="form-group">
 										<label for="lastName"><spring:message code="create.employee.lastName"/></label>
-										<form:input class="form-control" path="lastName" />
+										<form:input class="form-control" path="lastName" required="required"/>
 									</div>
 									<div class="form-group">
 										<label for="salary"><spring:message code="create.employee.salary"/></label> <input type="text"
-											name="salary" class="form-control" id="salary" />
+											name="salary" class="form-control" id="salary" required/>
 									</div>
 									<button type="submit" class="btn btn-default"><spring:message code="create.employee.salary.submit"/></button>
 								</form:form>

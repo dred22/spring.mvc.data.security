@@ -13,15 +13,13 @@
                     <div class="col-lg-12">
                         <h1>My CRUD web site</h1>
                         <p><spring:message code="welcome"/></p>
-                        <a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Toggle Menu</a>
+                        
                     </div>
                 </div>
             </div>
+            <a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Toggle Menu</a>
         </div>
         <!-- /#page-content-wrapper -->
-
-    </div>
-    <!-- /#wrapper -->
 
 <%@ include file="components/script-block.jsp" %>
 <%@ include file="components/foot.jsp" %>

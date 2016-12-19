@@ -31,5 +31,7 @@ public class DispatcherServletInitializer extends
 	protected Filter[] getServletFilters() {
 		return new Filter[] { new HiddenHttpMethodFilter() };
 	}
+	
+	
 
 }

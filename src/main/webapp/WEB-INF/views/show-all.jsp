@@ -2,12 +2,11 @@
 <%@ include file="components/head.jsp"%>
 <%@ taglib uri="http://www.springframework.org/tags" prefix="spring"%>
 
-	<%@ include file="components/side-bar.jsp"%>
+<%@ include file="components/side-bar.jsp"%>
 
+<!-- Page Content -->
+<div id="page-content-wrapper">
 
-	<!-- Page Content -->
-	
-	<div id="page-content-wrapper">
 		<div class="container">
 		
 		
@@ -39,12 +38,10 @@
 					</c:otherwise>
 				</c:choose>		
 			
-		</div><a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Toggle Menu</a>
+		</div>
+	<a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Toggle Menu</a>
 	</div>
 	<!-- /#page-content-wrapper -->
-
-</div>
-<!-- /#wrapper -->
 
 <%@ include file="components/script-block.jsp"%>
 <%@ include file="components/foot.jsp"%>

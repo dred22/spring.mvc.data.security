@@ -1,4 +1,4 @@
-package fr.treeptik.java.config;
+package fr.treeptik.java.security;
 
 import org.springframework.security.web.context.AbstractSecurityWebApplicationInitializer;
 

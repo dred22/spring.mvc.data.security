@@ -19,7 +19,7 @@
 
     <!-- Custom CSS -->
     <link href="${pageContext.request.contextPath}/public/css/simple-sidebar.css" rel="stylesheet">
-
+<link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.css" />
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
