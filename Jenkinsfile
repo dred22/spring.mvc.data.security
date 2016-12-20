@@ -1,3 +1,5 @@
 node{
-	sh 'mvn verify'
+	withEnv(["PATH+MVN=${tool 'MVN'}/bin"]){
+		sh 'mvn verify'
+	}
 }
