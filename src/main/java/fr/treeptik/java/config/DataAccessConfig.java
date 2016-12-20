@@ -34,7 +34,7 @@ public class DataAccessConfig {
 
 		BasicDataSource dataSource = new BasicDataSource();
 		dataSource.setDriverClassName(environment.getProperty("db.driverClassName"));
-		System.out.println(environment.getProperty("db.url") +" driver is "+ environment.getProperty("db.driverClassName"));
+		//System.out.println(environment.getProperty("db.url") +" driver is "+ environment.getProperty("db.driverClassName"));
 		dataSource.setUrl(environment.getProperty("db.url"));
 		dataSource.setUsername(environment.getProperty("db.username"));
 		dataSource.setPassword(environment.getProperty("db.password"));

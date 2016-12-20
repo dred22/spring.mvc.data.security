@@ -4,7 +4,9 @@ import static org.easymock.EasyMock.createMock;
 import static org.easymock.EasyMock.expect;
 import static org.easymock.EasyMock.replay;
 import static org.easymock.EasyMock.verify;
+import static org.junit.Assert.assertThat;
 import static org.junit.Assert.assertTrue;
+import static org.hamcrest.Matchers.*;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -31,7 +33,7 @@ public class DepartmentServiceTest {
 	@Test
 	public void testRepository() {
 		
-		assertTrue(serviceDepartment.getDr() instanceof DepartmentRepository);
+		assertThat(serviceDepartment.getDr(), instanceOf(DepartmentRepository.class));
 	}
 	
 	@Test
