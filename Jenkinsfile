@@ -2,6 +2,7 @@ node{
 	checkout scm
 	withEnv(["PATH+MVN=${tool 'MVN'}/bin"]){
 		sh 'mvn verify'
-		junit 'surefire-reports/*.xml'
+		sh 'ls target'
+		junit 'target/surefire-reports/*.xml'
 	}
 }
