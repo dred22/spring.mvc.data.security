@@ -175,7 +175,7 @@
 				<version>2.2</version>
 				<configuration>
 					<path>/spring</path>
-					<url>https://192.168.99.100/manager/text</url>
+					<url>http://192.168.99.100/manager/text</url>
 					<username>root</username>
 					<password>root</password>
 				</configuration>
